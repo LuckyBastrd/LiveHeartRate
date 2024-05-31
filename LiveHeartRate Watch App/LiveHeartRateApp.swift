@@ -19,6 +19,7 @@ struct LiveHeartRate_Watch_AppApp: App {
             } else {
                 Text("Requesting Health Data Access...")
                     .onAppear {
+                        // Request authorization for HealthKit access when the app launches.
                         healthKitManager.requestAuthorization()
                     }
             }
